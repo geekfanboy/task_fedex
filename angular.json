@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/spectre.css/src/spectre.scss",              
+              "./node_modules/spectre.css/dist/spectre-icons.css"
             ],
             "scripts": []
           },
@@ -96,12 +98,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/spectre.css/src/spectre.scss",              
+              "./node_modules/spectre.css/dist/spectre-icons.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
