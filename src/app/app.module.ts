@@ -12,10 +12,10 @@ import { StoreModule } from '@ngrx/store';
 
 import { SignupComponent } from './components/signup/signup.component';
 import { SignupSuccessComponent } from './components/signup-success/signup-success.component';
-import { TrimInputDirective } from './directives/trim-input.directive';
 import { signupReducer } from './store/signup/signup.reducers';
 import { SignUpEffects } from './store/signup/signup.effects';
 import { SignupFailComponent } from './components/signup-fail/signup-fail.component';
+import { TrimDirective } from './directives/trim.directive';
 
 
 @NgModule({
@@ -23,8 +23,8 @@ import { SignupFailComponent } from './components/signup-fail/signup-fail.compon
     AppComponent,
     SignupComponent,
     SignupSuccessComponent,
-    TrimInputDirective,
-    SignupFailComponent
+    SignupFailComponent,
+    TrimDirective
   ],
   imports: [
     BrowserModule,
