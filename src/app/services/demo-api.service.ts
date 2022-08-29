@@ -13,7 +13,6 @@ export class DemoApiService {
   }
   
   registerUser(user: any): Observable<any> {
-    console.log(user);
     return this.http.post<any>(DemoApiService.APIURL + '/users', user)
   }
 

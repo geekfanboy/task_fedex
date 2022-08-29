@@ -21,22 +21,18 @@ export const initialState: State = {
 const _signupReducer = createReducer(
     initialState,
     on(SignUpActions.registerUser, (state, {user}) => {
-        console.log(user);
         return {
             ...state,
             user: user
         }
     }),
     on(SignUpActions.registerSuccess, (state, { response }) => {
-        console.log('success');
-        console.log(response);
         return {
             ...state,
             token: response._id
         }
     }),
     on(SignUpActions.registerFail, (state, { error }) => {
-        console.log('fail');
         return {
             ...state,
             token: '',
