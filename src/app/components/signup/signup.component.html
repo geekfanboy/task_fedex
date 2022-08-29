@@ -43,12 +43,13 @@
 
                             <div *ngIf="signupForm.controls['password'].invalid && (signupForm.controls['password'].dirty || signupForm.controls['password'].touched)"
                                 class="text-error form-hint">
+
                                 <div *ngIf="signupForm.controls['password'].hasError('required')"><i>Password</i> is required.</div>
                                 <div *ngIf="signupForm.controls['password'].hasError('minlength')">Must be at least 8 characters</div>
                                 <div *ngIf="signupForm.controls['password'].hasError('pattern')">Must include at least 1 UPPERCASE and 1 lowercase character</div>
+                                <div *ngIf="signupForm.controls['password'].hasError('nameUseValidator')">Must not include your FIRST or LAST NAME</div>
                             </div>
-                            <div *ngIf="signupForm.hasError('nameUseValidator') && (signupForm.controls['password'].dirty || signupForm.controls['password'].touched)"
-                                class="text-error">Must not include your FIRST or LAST NAME</div>
+                            
                         </div>
                         <button id="btn-signup" [disabled]="signupForm.invalid"
                             class="btn btn-primary d-block btn-lg btn--full my-20" type="submit"
